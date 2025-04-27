@@ -1,0 +1,21 @@
+spring:
+  main:
+    banner-mode: console
+  application:
+    name: spring-security-document
+  devtools:
+    restart:
+      enabled: true
+my:
+  todo:
+    name: todo-name
+logging:
+  level:
+    root: "info"
+    com.dingli.spring_security_document.developingWithSpringBoot.A_configuration: "debug"
+    com.dingli.spring_security_document.developingWithSpringBoot.B_developerTools: "debug"
+management:
+  endpoint:
+    health:
+      show-components: always
+      show-details: always
