@@ -1,4 +1,4 @@
-package com.dingli.spring_security_document.B_coreFeatures.A_springApplication;
+package com.dingli.spring_security_document.B_coreFeatures.A_springApplication.eventListener;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.availability.AvailabilityChangeEvent;

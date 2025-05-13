@@ -3,9 +3,30 @@ spring:
     banner-mode: console
   application:
     name: spring-security-document
+  datasource:
+    url: jdbc:hsqldb:mem:testdb
+    username: sa
+    password:
+    driver-class-name: org.hsqldb.jdbc.JDBCDriver
   devtools:
     restart:
       enabled: true
+  jpa:
+    properties:
+      hibernate:
+        format_sql: true
+    database-platform: org.hibernate.dialect.HSQLDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  sql:
+    init:
+      mode: embedded
+
 my:
   todo:
     name: todo-name
@@ -14,8 +35,14 @@ logging:
     root: "info"
     com.dingli.spring_security_document.developingWithSpringBoot.A_configuration: "debug"
     com.dingli.spring_security_document.developingWithSpringBoot.B_developerTools: "debug"
+    org.springframework.jdbc.datasource.init: debug
 management:
   endpoint:
     health:
       show-components: always
       show-details: always
+  health:
+    livenessstate:
+      enabled: true
+    readinessstate:
+      enabled: true
